@@ -14,3 +14,6 @@ Multi-class Classification and Neural Networks
 
 ## machine-learning-ex4
 Neural Networks Learning
+
+## machine-learning-ex5
+Regularized Linear Regression and Bias/Variance
