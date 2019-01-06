@@ -67,29 +67,32 @@ a2 = sigmoid( a1 * Theta1' );
 a2 = [ones(size(a2, 1), 1), a2];
 a3 = sigmoid(a2 * Theta2');
 
-temp = zeros(m, 1);
+tempCost = zeros(m, 1);
+
 for i = 1 : m
     yi = zeros(num_labels, 1);
     yi(y(i)) = 1;
-    temp(i) =  -log(a3(i,:)) * yi - log(1-a3(i,:)) * (1-yi) ;
+    tempCost(i) =  -log(a3(i,:)) * yi - log(1-a3(i,:)) * (1-yi) ;
+    
+    delta3 = a3(i, :)' - yi;
+    z2 = [1, a1(i, :) * Theta1'];
+    delta2 = delta3' * Theta2 .* sigmoidGradient(z2);
+    
+    Theta2_grad = Theta2_grad + delta3 * a2(i,:);
+    Theta1_grad = Theta1_grad + delta2(2:end)' * a1(i,:);
 end
 
 t1 = Theta1(:, 2:end);
 t2 = Theta2(:, 2:end);
 
-J = 1/m * sum(temp) + lambda/(2*m) * (sum(t1(:).^2) + sum(t2(:).^2));
+J = 1/m * sum(tempCost) + lambda/(2*m) * (sum(t1(:).^2) + sum(t2(:).^2));
 
-% [~, h] = max(a3, [], 2);
-
-
-
-
-
-
-
-
-
-
+tg1 = Theta1_grad(:, 1) / m;
+tg2 = Theta2_grad(:, 1) / m;
+Theta1_grad = Theta1_grad ./ m + lambda / m * Theta1;
+Theta1_grad(:, 1) = tg1;
+Theta2_grad = Theta2_grad ./ m + lambda / m * Theta2;
+Theta2_grad(:, 1) = tg2;
 
 % -------------------------------------------------------------
 
