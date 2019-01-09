@@ -16,4 +16,5 @@ Multi-class Classification and Neural Networks
 Neural Networks Learning
 
 ## machine-learning-ex5
-Regularized Linear Regression and Bias/Variance
+Regularized Linear Regression and Bias/Variance.
+There's one thing to note: when compute error_train and error_val for learning curve and validtion curve, the lambda value passed to the LinearRegCostFunction should be 0.
