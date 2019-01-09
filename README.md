@@ -3,6 +3,8 @@ Programming Assignments of coursera Machine Learning Course by Andrew Ng from St
 
 All the files are exactly the same with original, but with the excersice code completed. The instruction documents, which are pdf format, are also included in this repository.
 
+**Note: you should use this repository just as a reference. Complete the programming assignments by yourself is the best way to learn and practice. I don't want anyone to cheat in the course, as you will learn nothing.**
+
 ## machine-learning-ex1
 Linear Regression
 
