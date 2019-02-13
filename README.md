@@ -9,7 +9,7 @@ All the files are exactly the same with original, but with the excersice code co
 Linear Regression
 
 ## machine-learning-ex2
-Logisitic Regression
+Logistic Regression
 
 ## machine-learning-ex3
 Multi-class Classification and Neural Networks
@@ -21,3 +21,7 @@ Neural Networks Learning
 Regularized Linear Regression and Bias/Variance.
 
 There's one thing to note: when compute error_train and error_val for learning curve and validtion curve, the lambda value passed to the LinearRegCostFunction should be 0.
+
+## machine-learning-ex6
+
+Support Vector Machines
