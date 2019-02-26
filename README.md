@@ -25,3 +25,7 @@ There's one thing to note: when compute error_train and error_val for learning c
 ## machine-learning-ex6
 
 Support Vector Machines
+
+## machine-learning-ex7
+
+K-means and PCA algorithm.
